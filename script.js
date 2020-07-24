@@ -42,6 +42,7 @@ function showLoading() {
         setTimeout(() => {
             showPosts();
         }, 300);
+
     }, 1000);
 }
 
