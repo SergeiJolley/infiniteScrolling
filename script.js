@@ -22,7 +22,7 @@ async function showPosts() {
         const postEl = document.createElement('div');
         postEl.classList.add('post');
         postEl.innerHTML = `
-        <div class ="number">${post.id}</div>
+        <div class ="number">${page++}</div>
         <div class ="posts-info">
         <h2 class="posts-title">${post.title}</h2>
         <p class="post-body">${post.body}</p>
@@ -40,7 +40,6 @@ function showLoading() {
         loading.classList.remove('show');
 
         setTimeout(() => {
-            page++;
             showPosts();
         }, 300);
     }, 1000);
