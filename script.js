@@ -7,7 +7,7 @@ let page = 1;
 
 
 async function getPosts() {
-    const res = await fetch(`//jsonplaceholder.typicode.com/posts?_limit=${limit}&page=${page}`);
+    const res = await fetch(`//jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`);
 
     const data = await res.json();
 
@@ -22,7 +22,7 @@ async function showPosts() {
         const postEl = document.createElement('div');
         postEl.classList.add('post');
         postEl.innerHTML = `
-        <div class ="number">${page++}</div>
+        <div class ="number">${post.id}</div>
         <div class ="posts-info">
         <h2 class="posts-title">${post.title}</h2>
         <p class="post-body">${post.body}</p>
@@ -40,6 +40,7 @@ function showLoading() {
         loading.classList.remove('show');
 
         setTimeout(() => {
+            page++;
             showPosts();
         }, 300);
 
@@ -76,6 +77,7 @@ window.addEventListener('scroll', () => {
 
     if (scrollTop + clientHeight >= scrollHeight - 5) {
         showLoading();
+
     }
 });
 
