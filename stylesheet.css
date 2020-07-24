@@ -19,9 +19,12 @@ body {
 
 }
 
-@media screen and (width: 600px) {
+@media (max-width: 600px) {
     .filter {
-        width: 90%;
+        margin-left: 90px;
+        max-width: 70%;
+        text-align: center;
+        padding: 0;
     }
 }
 
