@@ -22,9 +22,9 @@ async function showPosts() {
         const postEl = document.createElement('div');
         postEl.classList.add('post');
         postEl.innerHTML = `
-        <div class ="number">${posts.page}</div>
+        <div class ="number">${post.id}</div>
         <div class ="posts-info">
-        <h2 class="posts-title">${posts.title}</h2>
+        <h2 class="posts-title">${post.title}</h2>
         <p class="post-body">${post.body}</p>
         </div>
         `;
