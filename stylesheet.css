@@ -19,14 +19,7 @@ body {
 
 }
 
-@media (max-width: 600px) {
-    .filter {
-        margin-left: 90px;
-        max-width: 70%;
-        text-align: center;
-        padding: 0;
-    }
-}
+
 
 h1 {
     margin-bottom: 0;
